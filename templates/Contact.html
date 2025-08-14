@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%}
+    Contact
+{% endblock %}
+
+
+{% block content %}
+<body>
+<h1 style="text-align: center;">Contact</h1>
+
+<div style="border-top: 1px solid black; padding-top: 10px; max-width: 800px; margin: auto;">
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <span style="font-size: 1.3em; font-weight: bold;">Email</span>
+        <a href="mailto:mwroblew@gmu.edu">mwroblew@gmu.edu</a>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 1.3em; font-weight: bold;">Phone</span>
+        <a href="tel:+17326101047">(732) 610-1047</a>
+    </div>
+
+</div>
+</body>
+{% endblock %}
