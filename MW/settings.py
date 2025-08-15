@@ -29,10 +29,10 @@ SECRET_KEY = os.environ.get(
 DEBUG = False
 
 ALLOWED_HOSTS = [   
-    "michaels-website.onrender.com",]
+    "michaels-website-1.onrender.com",]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://michaels-website.onrender.com",
+    "https://michaels-website-1.onrender.com",
 ]
 
 # Application definition
