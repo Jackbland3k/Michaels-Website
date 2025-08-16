@@ -51,3 +51,75 @@ footer {
   max-width: 1100px;           /* optional: keep it readable */
   margin: 0 auto;              /* center on large screens */
 }
+
+
+/*Mobile friendly css below*/
+/* --- Home hero (photo + copy) --- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 30px;
+  background: #f5f5f5;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hero .photo { 
+  flex: 1.1;               /* a bit wider than text on desktop */
+  max-width: 520px; 
+}
+
+.hero .photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.hero .copy {
+  flex: 1;
+  text-align: left;
+}
+
+.hero .copy h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero .copy p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  /* allow long phrases to wrap nicely on iOS */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* tablet-ish: soften sizes a bit */
+@media (max-width: 992px) {
+  .hero { gap: 20px; padding: 24px; }
+  .hero .copy h1 { font-size: 1.6rem; }
+}
+
+/* phones: stack vertically */
+@media (max-width: 768px) {
+  .hero { 
+    flex-direction: column;   /* <-- the key change */
+    text-align: left;
+    padding: 20px;
+  }
+  .hero .photo, 
+  .hero .copy { 
+    width: 100%;
+    max-width: none;
+  }
+  .hero .photo img {
+    max-width: 420px;         /* keeps image from being too huge */
+    margin: 0 auto;           /* center the image */
+  }
+}
+
+/* optional: prevent any accidental sideways scroll on mobile */
+html, body { overflow-x: hidden; }
