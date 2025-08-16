@@ -106,25 +106,43 @@ footer {
 /* phones: stack vertically */
 @media (max-width: 768px) {
   .hero { 
-    flex-direction: column;   /* <-- the key change */
-    text-align: left;
+    flex-direction: column;   /* stack */
+    align-items: stretch;
     padding: 20px;
+    gap: 16px;
   }
-  .hero .photo, 
-  .hero .copy { 
+
+  /* image first when stacked */
+  .hero .photo { 
+    order: -1;
     width: 100%;
     max-width: none;
+    padding: 0;               /* image block itself doesn’t need side padding */
   }
+
+  .hero .copy {
+    width: 100%;
+    max-width: none;
+    padding: 0 12px;          /* comfy text gutters */
+  }
+
   .hero .photo img {
-  width: 100%;
-  max-height: 320px;   /* cap the vertical size */
-  object-fit: cover;   /* crop nicely instead of squishing */
-  border-radius: 6px;
-  display: block;
-  margin: 0 auto;
-  aspect-ratio: 4 / 3; /* keeps a pleasant shape on mobile */
+    width: 85vw;              /* responsive width on phones */
+    max-width: 380px;         /* cap so it never gets huge */
+    height: auto;             /* no cropping */
+    display: block;
+    margin: 0 auto;           /* center image */
+    border-radius: 6px;
+  }
+
+  /* Optional: make navbar container span full width on small screens */
+  .navbar .container {
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
-}
+
 
 /* optional: prevent any accidental sideways scroll on mobile */
 html, body { overflow-x: hidden; }
