@@ -7,14 +7,9 @@
 
 
 {% block content %}
-  <div class="hero">
-    <!-- Left: photo -->
-    <div class="photo">
-      <img src="{% static 'images/mwhs.webp' %}" alt="Michael Wroblewski">
-    </div>
-
-    <!-- Right: text -->
-    <div class="copy">
+<div class="container">
+  <section class="hero">
+    <div class="hero__text">
       <h1>Welcome,</h1>
 
       <p>
@@ -45,13 +40,17 @@
         economists who can apply their knowledge beyond the classroom.
       </p>
 
-      <div class="hero-icons">
+      <div class="hero__icons">
         <a href="mailto:mwroblew@gmu.edu" aria-label="Email">📧</a>
-        <a href="https://x.com/..." target="_blank" rel="noopener" aria-label="X"
-           class="mx">𝕏</a>
+        <a href="https://x.com/..." target="_blank" rel="noopener" aria-label="X">𝕏</a>
         <a href="https://www.linkedin.com/in/..." target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
       </div>
     </div>
-  </div>
+
+    <figure class="hero__img">
+      <img src="{% static 'images/mwhs.webp' %}" alt="Michael Wroblewski">
+    </figure>
+  </section>
+</div>
 {% endblock %}
 
