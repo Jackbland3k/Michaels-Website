@@ -9,14 +9,13 @@
 {% block content %}
 <h1> CV </h2>
 <div style="border-top: 1px solid black; padding-top: 5px;">
-    <div class="pdf-wrap">
-        <iframe 
-            src="{% static 'docs/cv.pdf' %}#toolbar=0&navpanes=0&scrollbar=0" 
-            title="CV"
-            width="100%"
-            height="90vh"
-            style="border:none;">
-        </iframe>
-    </div>
+  <div class="pdf-wrap" style="height: 90vh;">
+    <iframe
+      src="{% static 'docs/cv.pdf' %}#toolbar=0&navpanes=0&scrollbar=0"
+      title="CV"
+      style="width: 100%; height: 100%; border: none; display: block;">
+    </iframe>
+  </div>
 </div>
+
 {% endblock %}
